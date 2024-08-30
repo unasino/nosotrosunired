@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniRed - Presentación</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- AOS (Animate on Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+    }
+    .navbar {
+      background-color: #3498db;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff !important;
+    }
+    .jumbotron {
+      background-image: linear-gradient(135deg, #3498db, #2ecc71);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      margin-bottom: 0;
+      border-radius: 0 0 50% 50%;
+      overflow: hidden;
+    }
+    .jumbotron h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .jumbotron p {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .jumbotron .btn-primary {
+      background-color: #e74c3c;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+    .jumbotron .btn-primary:hover {
+      background-color: #c0392b;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #3498db;
+    }
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .feature-box {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-box i {
+      margin-bottom: 15px;
+    }
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #3498db;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-content {
+      padding: 20px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .timeline-item {
+      padding: 20px;
+      position: relative;
+      width: 50%;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #2ecc71;
+      border: 4px solid #fff;
+      z-index: 1;
+      left: -17px;
+    }
+    .team-member {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-member img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+    .team-member h5 {
+      margin-top: 15px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #3498db;
+    }
+    .team-member p {
+      color: #555;
+    }
+    .team-member a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .team-member a:hover {
+      color: #2980b9;
+    }
+    .footer {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">UniRed</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#general">Descripción General</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#objetivo">Objetivo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#usuarios">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#funciones">Funciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tecnologia">Tecnología</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#equipo">Equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#historia">Historia</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1 class="display-4 animate__animated animate__fadeInDown">Bienvenido a UniRed</h1>
+    <p class="lead animate__animated animate__fadeInUp">Tu plataforma universitaria, Mas que una red social.</p>
+    <a class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s" href="#general" role="button">Descubre Más</a>
+  </div>
+
+  <!-- Descripción General -->
+  <div id="general" class="container" data-aos="fade-up">
+    <h2 class="section-title">Descripción General</h2>
+    <p class="section-subtitle">UniRed es la plataforma digital que conecta a la comunidad universitaria de la Universidad Nacional Agraria de la Selva (UNAS).</p>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-university fa-3x" style="color: #2ecc71;"></i>
+          <h5 class="mt-3">Plataforma Universitaria</h5>
+          <p>UniRed centraliza toda la información relevante para la comunidad universitaria.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-box" data-aos="fade-up">
+          <i class="fas fa-users fa-3x" style="color: #3498db;"></i>
+          <h5 class="mt-3">Comunidad Conectada</h5>
+          <p>Conecta a estudiantes, profesores y docentes en un solo espacio.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-box" data-aos="fade-left">
+          <i class="fas fa-bullhorn fa-3x" style="color: #f1c40f;"></i>
+          <h5 class="mt-3">Información al Instante</h5>
+          <p>Mantente informado sobre eventos, confesiones, y exámenes pasados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Objetivo -->
+  <div id="objetivo" class="container" data-aos="fade-up">
+    <h2 class="section-title">Objetivo de UniRed</h2>
+    <p class="section-subtitle">Nuestro objetivo es ofrecer un único espacio para acceder y compartir información de manera eficiente.</p>
+  </div>
+
+  <!-- Usuarios Principales -->
+  <div id="usuarios" class="container" data-aos="fade-up">
+    <h2 class="section-title">Usuarios Principales</h2>
+    <p class="section-subtitle">UniRed está diseñada para estudiantes, profesores y docentes.</p>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-user-graduate fa-3x" style="color: #e74c3c;"></i>
+          <h5 class="mt-3">Estudiantes</h5>
+          <p>Navega, accede a la información, busca publicaciones, y participa en la comunidad.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-box" data-aos="fade-left">
+          <i class="fas fa-chalkboard-teacher fa-3x" style="color: #8e44ad;"></i>
+          <h5 class="mt-3">Profesores y Docentes</h5>
+          <p>Infórmate, publica contenido, y accede a las publicaciones de la comunidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Funciones Principales -->
+  <div id="funciones" class="container" data-aos="fade-up">
+    <h2 class="section-title">Funciones Principales</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-pencil-alt fa-3x" style="color: #3498db;"></i>
+          <h5 class="mt-3">Publicación de Contenidos</h5>
+          <p>Sube publicaciones y fíltralas por facultad o de manera general.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-box" data-aos="fade-up">
+          <i class="fas fa-search fa-3x" style="color: #2ecc71;"></i>
+          <h5 class="mt-3">Búsqueda y Filtrado</h5>
+          <p>Busca y filtra publicaciones por categorías y facultades.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-box" data-aos="fade-left">
+          <i class="fas fa-chart-line fa-3x" style="color: #e74c3c;"></i>
+          <h5 class="mt-3">Tendencias</h5>
+          <p>Muestra las publicaciones más populares y relevantes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tecnología y Seguridad -->
+  <div id="tecnologia" class="container" data-aos="fade-up">
+    <h2 class="section-title">Tecnología y Seguridad</h2>
+    <p class="section-subtitle">UniRed utiliza Ruby on Rails, HTML, CSS, JavaScript, y Bootstrap, con AWS para almacenamiento y Heroku para el despliegue.</p>
+  </div>
+
+  <!-- Equipo -->
+  <div id="equipo" class="container" data-aos="fade-up">
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <p class="section-subtitle">Conoce a los desarrolladores y colaboradores detrás de UniRed.</p>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="team-member" data-aos="flip-left">
+          <a href="https://web.facebook.com/profile.php?id=100088267851415&_rdc=1&_rdr">
+            <img src="https://i.ibb.co/7vGNh6D/image.png" alt="Nombre 1">
+            <h5 class="mt-3">GENUINE COMPANY</h5>
+            <p>Desarrollador Full Stack</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="team-member" data-aos="flip-up">
+          <a href="https://web.facebook.com/profile.php?id=61560042878408">
+            <img src="https://i.ibb.co/4gFT9gD/image.png" alt="Nombre 2">
+            <h5 class="mt-3">PIXEL WEB</h5>
+            <p>Diseñador UX/UI</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="team-member" data-aos="flip-right">
+          <a href="https://www.linkedin.com/in/nombre3">
+            <img src="https://via.placeholder.com/150" alt="Nombre 3">
+            <h5 class="mt-3">PIGO</h5>
+            <p>Especialista en Seguridad</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Historia del Proyecto y Plan Futuro -->
+  <div id="historia" class="container">
+    <h2 class="section-title" data-aos="fade-up">Historia y Plan Futuro</h2>
+    <div class="timeline" data-aos="fade-up">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-content">
+          <h5>Inicio del Proyecto</h5>
+          <p>El desarrollo de UniRed comenzó en el cuarto ciclo universitario, durante el curso de instrucción de software.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-content">
+          <h5>Plan Futuro</h5>
+          <p>Se planea implementar Machine Learning para mejorar la personalización y expandir la plataforma a otras universidades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 UniRed. Todos los derechos reservados.</p>
+    <a href="#">Términos</a> | <a href="#">Privacidad</a> | <a href="#">Contacto</a>
+  </footer>
+
+  <!-- AOS (Animate on Scroll) JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
